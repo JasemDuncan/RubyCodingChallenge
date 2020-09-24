@@ -5,30 +5,29 @@ require 'stringio'
 
 # Complete the repeatedString function below.
 def repeatedString(s, n)
-    
-    chain=''
-    a=[]
-    b=[]
-    contador=0
-    
-    #n.times do    
-     #  chain=s+chain
-    #end
-    
-    if(s=='a')
-        return n
-    end
-    
-    chain=s.to_s*n
-    
-    b=chain.split(//)
-    
-    n.times do |i|
-        if(b[i].to_s=='a')
-            contador=1+contador
+   i=0
+   j=0
+   total=n/s.length
+   residuo=n%s.length
+   a=[]
+   a=s.split(//)
+   cuentaATotal=0
+   cuentaAResiduo=0
+    while i<s.length do
+        if('a'==a[i])
+            cuentaATotal=1+cuentaATotal
         end        
+        i=i+1
     end
-    return contador
+    tequeda=s.split(//)
+    while j<residuo do
+        if('a'==tequeda[j])
+            cuentaAResiduo=1+cuentaAResiduo
+        end
+        j=j+1
+    end
+    return cuentaATotal.to_i*total + cuentaAResiduo
+    
 end
 
 fptr = File.open(ENV['OUTPUT_PATH'], 'w')
