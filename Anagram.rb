@@ -1,27 +1,27 @@
-#!/bin/ruby
-
-require 'json'
-require 'stringio'
-
-#
-# Complete the 'diagonalDifference' function below.
-#
-# The function is expected to return an INTEGER.
 # The function accepts 2D_INTEGER_ARRAY arr as parameter.
 #
 
 def diagonalDifference(arr)
     # Write your code here
-    d1=0
-    d2=0
-
-     d1= arr[0][0] +arr[1][1]+arr[2][2]
-     d2= arr[0][2] +arr[1][1]+arr[2][0]
-
-    if (d1-d2)<0
-        return (d1-d2)*-1
+    i=0
+    j=0
+    k=0
+    dx=0
+    dy=0
+    arr.length.times do |i| 
+        dx= arr[i][i].to_i + dx 
+        i=i+1
+    end
+    j=arr.length - 1  
+    arr.length.times do |k| 
+        dy= arr[k][j] + dy
+        k=k+1
+        j=j-1
+    end
+    if (dx-dy)<0
+        return (dx-dy)*-1
     else
-        return d1-d2
+        return dx-dy
     end
 end
 
