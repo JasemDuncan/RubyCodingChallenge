@@ -6,7 +6,7 @@
 def pageCount(n, p)
     #
     # Write your code here.
-    #
+    #code is missing
 
 end
 

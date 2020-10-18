@@ -12,7 +12,7 @@ require 'stringio'
 
 def birthdayCakeCandles(candles)
     # Write your code here
- #code is missing
+    #code is missing
 end
 
 fptr = File.open(ENV['OUTPUT_PATH'], 'w')

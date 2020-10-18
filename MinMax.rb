@@ -5,7 +5,7 @@ require 'stringio'
 
 # Complete the miniMaxSum function below.
 def miniMaxSum(arr)
-
+#code is missing
 
 end
 
