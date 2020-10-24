@@ -10,3 +10,5 @@ end
   
   puts sum(4)
   puts sum(10)
+  puts sum(15)
+  puts sum(20)
