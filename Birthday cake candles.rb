@@ -12,7 +12,32 @@ require 'stringio'
 
 def birthdayCakeCandles(candles)
     # Write your code here
-    #code is missing
+    max=0
+    count=0
+    candles.each do |e=0|
+        if (candles[e].to_i >=candles[e+1].to_i)
+            if max>=candles[e].to_i
+                max=max
+            else
+                max=candles[e].to_i
+            end
+        else
+            if max>=candles[e+1].to_i
+                max=max
+            else
+                max=candles[e+1].to_i
+            end
+        end
+        e=e+1
+    end
+    counter=0
+    candles.each do |e|
+        if (candles[e].to_i==max)
+            counter=counter +1
+        end
+    end
+    return counter 
+    
 end
 
 fptr = File.open(ENV['OUTPUT_PATH'], 'w')
