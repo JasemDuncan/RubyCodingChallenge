@@ -13,30 +13,34 @@ require 'stringio'
 def birthdayCakeCandles(candles)
     # Write your code here
     max=0
-    count=0
+    count =0
     candles.each do |e=0|
-        if (candles[e].to_i >=candles[e+1].to_i)
-            if max>=candles[e].to_i
-                max=max
-            else
-                max=candles[e].to_i
-            end
+        if candles[e].last.to_i >= max
+            max=candles[e].last
         else
-            if max>=candles[e+1].to_i
-                max=max
+            if(candles[e].to_i >= candles[e+1].to_i)
+                if max >= candles[e].to_i
+                    max=max
+                else
+                    max=candles[e].to_i
+                end
             else
-                max=candles[e+1].to_i
+                if max>=candles[e+1].to_i
+                    max=max
+                else
+                    max=candles[e+1].to_i
+                end
             end
         end
         e=e+1
     end
     counter=0
     candles.each do |e|
-        if (candles[e].to_i==max)
-            counter=counter +1
+        if(candles[e].to_i==max)
+            counter=counter+1
         end
     end
-    return counter 
+    return counter
     
 end
 
