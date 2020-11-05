@@ -14,34 +14,37 @@ def birthdayCakeCandles(candles)
     # Write your code here
     max=0
     count =0
-    candles.each do |e=0|
-        if candles[e].last.to_i >= max
-            max=candles[e].last
-        else
-            if(candles[e].to_i >= candles[e+1].to_i)
-                if max >= candles[e].to_i
+    i=0
+    candles.each do |e|
+        #puts candles[e].to_s
+        #puts candles[i].to_s #3 2 1 3 
+        #puts i #este llega hasta el 3 por que son 4 elementos
+            if(candles[i].to_i >= candles[i+1].to_i)
+                if max >= candles[i].to_i
                     max=max
                 else
-                    max=candles[e].to_i
+                    max=candles[i].to_i
                 end
             else
-                if max>=candles[e+1].to_i
+                if max>=candles[i+1].to_i
                     max=max
                 else
-                    max=candles[e+1].to_i
+                    max=candles[i+1].to_i
                 end
             end
-        end
-        e=e+1
+
+        i=i+1
     end
+    #puts max.to_s
+    j=0
     counter=0
     candles.each do |e|
-        if(candles[e].to_i==max)
+        if(candles[j].to_i==max)
             counter=counter+1
         end
+        j=j+1
     end
     return counter
-    
 end
 
 fptr = File.open(ENV['OUTPUT_PATH'], 'w')
