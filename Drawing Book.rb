@@ -6,7 +6,20 @@
 def pageCount(n, p)
     #
     # Write your code here.
-    #code is missing
+    #
+    
+    izquierda_derecha=p/2
+
+    while (n >=1) do
+        if p==n
+            derecha_izquierda=n
+        end
+        n=n-1
+    end
+    derecha_izquierda=derecha_izquierda
+    
+    puts derecha_izquierda
+    puts izquierda_derecha
 
 end
 
