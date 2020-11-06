@@ -6,21 +6,18 @@
 def pageCount(n, p)
     #
     # Write your code here.
-    #
-    
-    izquierda_derecha=p/2
-
-    while (n >=1) do
-        if p==n
-            derecha_izquierda=n
-        end
-        n=n-1
+    #    
+    left_right=p/2    
+    right_left=(n/2) - (p/2)
+        
+    if left_right<right_left
+        return left_right
+    else
+        return right_left
     end
-    derecha_izquierda=derecha_izquierda
     
-    puts derecha_izquierda
-    puts izquierda_derecha
 
+    
 end
 
 fptr = File.open(ENV['OUTPUT_PATH'], 'w')
