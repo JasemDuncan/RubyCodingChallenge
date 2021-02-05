@@ -16,6 +16,19 @@ def pageCount(n, p)
         return right_left
     end
     
+   #Second Solution
+   # total_array=n/2
+   # element_in_array=p/2
+    
+   # if element_in_array == total_array
+   #     return 0
+   # else
+    #    if (total_array - element_in_array) < element_in_array
+    #        return total_array - element_in_array 
+    #    else
+    #        return p/2
+    #    end
+    #end
 
     
 end
