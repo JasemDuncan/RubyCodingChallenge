@@ -6,16 +6,12 @@ dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","o
 
 def substrings(word,dictionary)
   result = Hash.new(0)
-  # puts result
-  # lowered_text = word.downcase
+
 
   dictionary.each do |palabra|
     matches=word.downcase.scan(palabra).length
     result[palabra]=matches if matches!=0
-    # puts matches
-
   end
-  
 return  result
 end
 
